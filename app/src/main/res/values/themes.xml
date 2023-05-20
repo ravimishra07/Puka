@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Lukastore" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/app_red</item>
+    </style>
+    <style name="Theme.Lukastore" parent="Base.Theme.Lukastore" >
+        <item name="toolbarStyle">@style/ToolBarStyle</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">#ffff</item>
+        <item name="titleTextAppearance">@style/TitleTextAppearance</item>
+    </style>
+    <style name="TitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF553E</item>
+    </style>
+
+</resources>

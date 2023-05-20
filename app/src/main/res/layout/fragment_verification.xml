@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LogInSignUpSection.Fragment.VerificationFragment">
+    <include
+        android:id="@+id/tb"
+        layout="@layout/tool_bar" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/tb"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/_210sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/iv_verification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.07"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@color/app_red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvContentFirst"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Enter One time Password (OTP) Code that was sent to +9789654234 "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:gravity="center"
+                app:fontFamily="@font/poppins_semibold"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:textSize="@dimen/_9sdp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/text_white"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:text="One Time password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:fontFamily="@font/poppins_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvContentFirst" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/otpPin"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:clickable="true"
+                android:cursorVisible="true"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:hint="----"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:itemBackground="@color/blur_red"
+                android:textColor="@color/black"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:itemCount="4"
+                app:itemSpacing="@dimen/_15sdp"
+                app:itemWidth="@dimen/_54sdp"
+                app:lineColor="@color/app_red"
+                app:lineWidth="@dimen/_1sdp"
+                app:viewType="rectangle"
+                app:itemRadius="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="@dimen/_5sdp"
+                app:layout_constraintVertical_bias="0.05"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/bg_button_radius"
+                android:drawableEnd="@drawable/small_size_arrow"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:text="Verify"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/_11sdp"
+                app:fontFamily="@font/poppins_semibold"
+                app:layout_constraintEnd_toEndOf="@id/otpPin"
+                app:layout_constraintStart_toStartOf="@id/otpPin"
+                app:layout_constraintTop_toBottomOf="@+id/otpPin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
