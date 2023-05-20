@@ -13,22 +13,29 @@
         android:theme="@style/Theme.Lukastore"
         tools:targetApi="31">
         <activity
-            android:name=".BaseActivity"
+            android:name=".DashboardActivity"
+            android:exported="false"
+            android:label="@string/title_activity_dashboard" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LogInSignUpSection.Activity.SignUpActivity"
+            android:name=".core.BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".LogInSignUpSection.Activity.ForgotActivity"
+            android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LogInSignUpSection.Activity.WalkthroughActivity"
+            android:name=".activity.ForgotActivity"
             android:exported="false" />
         <activity
-            android:name=".LogInSignUpSection.Activity.LoginActivity"
+            android:name=".activity.WalkThroughActivity"
             android:exported="false" />
         <activity
-            android:name=".LogInSignUpSection.Activity.SplashActivity"
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LogInSignUpSection.Activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.Lukastore" />
 

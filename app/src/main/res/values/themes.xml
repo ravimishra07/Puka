@@ -3,6 +3,9 @@
     <style name="Base.Theme.Lukastore" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/app_red</item>
+         <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
     </style>
     <style name="Theme.Lukastore" parent="Base.Theme.Lukastore" >
         <item name="toolbarStyle">@style/ToolBarStyle</item>

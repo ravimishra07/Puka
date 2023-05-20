@@ -1,425 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LogInSignUpSection.Fragment.SignUpFragment">
-    <include
-        android:id="@+id/tb"
-        layout="@layout/tool_bar" />
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:fillViewport="true"
-    app:layout_constraintTop_toBottomOf="@+id/tb"
-    app:layout_constraintBottom_toBottomOf="parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    tools:context=".fragment.SignUpFragment">
 
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:background="@color/app_red"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivProfile"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_80sdp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:src="@color/blur_red"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="@dimen/_35sdp"
-            />
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCamera"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/baseline_photo_camera_24"
-            app:layout_constraintTop_toTopOf="@+id/ivProfile"
-            app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
-            app:layout_constraintStart_toStartOf="@+id/ivProfile"
-            app:layout_constraintEnd_toEndOf="@id/ivProfile"/>
-
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_40sdp"
-            android:text="Name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
-
-
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtName"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawableStart="@drawable/user_icon"
-            android:drawablePadding="@dimen/_10sdp"
-            android:fontFamily="@font/poppins_medium"
-            android:hint="Enter Name"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvName"
-            tools:layout_editor_absoluteX="39dp" />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvEmail"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Email"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtName" />
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawableStart="@drawable/bg_small_email"
-            android:drawablePadding="@dimen/_10sdp"
-            android:hint="Enter Email"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+            android:background="@color/app_red">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Phone Number"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:scaleType="centerCrop"
+                android:src="@color/blur_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/baseline_photo_camera_24"
+                app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+                app:layout_constraintEnd_toEndOf="@id/ivProfile"
+                app:layout_constraintStart_toStartOf="@+id/ivProfile"
+                app:layout_constraintTop_toTopOf="@+id/ivProfile" />
 
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtNumber"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawableStart="@drawable/icon_phone"
-            android:drawablePadding="@dimen/_10sdp"
-            android:hint="Enter Phone Number"
-            android:inputType="number"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvNumber" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvGovId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Government ID"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtNumber" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Enter Name"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:layout_editor_absoluteX="39dp" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtGovId"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawablePadding="@dimen/_10sdp"
-            android:hint="Upload Government ID"
-            android:drawableStart="@drawable/small_size_govt_icon"
-            android:inputType="number"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvGovId" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/bg_small_email"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Store Name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtGovId" />
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawableStart="@drawable/btn_lock"
-            android:drawablePadding="@dimen/_10sdp"
-            android:hint="Enter name"
-            android:inputType="textPassword"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/Cateogaries"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/edtPassword"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Cateogaries"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCheck1"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/check"
-            app:layout_constraintTop_toBottomOf="@+id/Cateogaries"
-            app:layout_constraintStart_toStartOf="@+id/edtPassword"
-            android:layout_marginTop="@dimen/_10sdp"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvHooka"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hookah"
-            android:textColor="@color/white"
-            android:layout_marginStart="@dimen/_5sdp"
-            app:layout_constraintStart_toEndOf="@+id/ivCheck1"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck1"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck1"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCheck2"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/check"
-            app:layout_constraintEnd_toStartOf="@+id/tvCigar"
-            app:layout_constraintStart_toEndOf="@+id/tvHooka"
-            android:layout_marginStart="@dimen/_18sdp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvHooka"
-           app:layout_constraintTop_toTopOf="@+id/tvHooka"
-            />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvCigar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cigar"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@color/white"
-            android:layout_marginEnd="@dimen/_25sdp"
-            app:layout_constraintEnd_toStartOf="@+id/ivCheck3"
-            app:layout_constraintStart_toEndOf="@+id/ivCheck2"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck2"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck2"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCheck3"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/check"
-            app:layout_constraintTop_toTopOf="@+id/tvCigar"
-            app:layout_constraintEnd_toStartOf="@+id/tvEcigarate"
-            app:layout_constraintBottom_toBottomOf="@+id/tvCigar"
-            android:layout_marginEnd="@dimen/_10sdp"
-           />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvEcigarate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="E-Cigarette"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck3"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck3"
-           app:layout_constraintEnd_toEndOf="@+id/edtPassword"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCheck4"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/check"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="@+id/ivCheck1"
-            app:layout_constraintTop_toBottomOf="@+id/ivCheck1"
-            />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTobacco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tobacco"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@color/white"
-            android:layout_marginEnd="@dimen/_25sdp"
-            app:layout_constraintStart_toEndOf="@+id/ivCheck4"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck4"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck4"/>
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCheck5"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/check"
-            android:layout_marginStart="@dimen/_13sdp"
-            app:layout_constraintTop_toBottomOf="@+id/ivCheck2"
-            app:layout_constraintTop_toTopOf="@+id/tvTobacco"
-            app:layout_constraintStart_toEndOf="@+id/tvTobacco"
-            app:layout_constraintBottom_toBottomOf="@+id/tvTobacco"
-            android:layout_marginEnd="@dimen/_10sdp"
-            />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvWeed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Weed"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@color/white"
-            android:layout_marginEnd="@dimen/_25sdp"
-            app:layout_constraintStart_toEndOf="@+id/ivCheck5"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck5"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck5"/>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Password"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivCheck5" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Phone Number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtPass"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawableStart="@drawable/btn_lock"
-            android:drawablePadding="@dimen/_10sdp"
-            android:hint="Enter Password"
-            android:inputType="textPassword"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvPass" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/icon_phone"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Enter Phone Number"
+                android:inputType="number"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvNumber" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvConfirmPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:text="Confirm Password"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtPass" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGovId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Government ID"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNumber" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtGovId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/small_size_govt_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Upload Government ID"
+                android:inputType="number"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvGovId" />
 
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:background="@drawable/bg_edit_radius"
-            android:drawableStart="@drawable/btn_lock"
-            android:drawablePadding="@dimen/_10sdp"
-            android:hint="Enter Confirm Password"
-            android:inputType="textPassword"
-            android:paddingHorizontal="@dimen/_10sdp"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintTop_toBottomOf="@+id/tvConfirmPassword" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Store Name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtGovId" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCheck"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:src="@drawable/check"
-            app:layout_constraintTop_toBottomOf="@+id/edtConfirmPassword"
-            app:layout_constraintStart_toStartOf="@+id/edtConfirmPassword"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/btn_lock"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Enter name"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvIAccept"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="I accept"
-            android:textColor="@color/white"
-            android:layout_marginStart="@dimen/_5sdp"
-            app:layout_constraintStart_toEndOf="@+id/ivCheck"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Cateogaries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Cateogaries"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheck1"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/check"
+                app:layout_constraintStart_toStartOf="@+id/edtPassword"
+                app:layout_constraintTop_toBottomOf="@+id/Cateogaries" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHooka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="Hookah"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck1"
+                app:layout_constraintStart_toEndOf="@+id/ivCheck1"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheck2"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="@+id/tvHooka"
+                app:layout_constraintEnd_toStartOf="@+id/tvCigar"
+                app:layout_constraintStart_toEndOf="@+id/tvHooka"
+                app:layout_constraintTop_toTopOf="@+id/tvHooka" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCigar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:text="Cigar"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck2"
+                app:layout_constraintEnd_toStartOf="@+id/ivCheck3"
+                app:layout_constraintStart_toEndOf="@+id/ivCheck2"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheck3"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCigar"
+                app:layout_constraintEnd_toStartOf="@+id/tvEcigarate"
+                app:layout_constraintTop_toTopOf="@+id/tvCigar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEcigarate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="E-Cigarette"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck3"
+                app:layout_constraintEnd_toEndOf="@+id/edtPassword"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheck4"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/check"
+                app:layout_constraintStart_toStartOf="@+id/ivCheck1"
+                app:layout_constraintTop_toBottomOf="@+id/ivCheck1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTobacco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:text="Tobacco"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck4"
+                app:layout_constraintStart_toEndOf="@+id/ivCheck4"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheck5"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTobacco"
+                app:layout_constraintStart_toEndOf="@+id/tvTobacco"
+                app:layout_constraintTop_toBottomOf="@+id/ivCheck2"
+                app:layout_constraintTop_toTopOf="@+id/tvTobacco" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:text="Weed"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck5"
+                app:layout_constraintStart_toEndOf="@+id/ivCheck5"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivCheck5" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTermsCondition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="terms conditions"
-            android:textColor="@color/white"
-            android:layout_marginStart="@dimen/_5sdp"
-            app:layout_constraintStart_toEndOf="@+id/tvIAccept"
-            app:layout_constraintTop_toTopOf="@+id/ivCheck"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCheck"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/btn_lock"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Enter Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvPass" />
 
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/btnSignUp"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginHorizontal="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:background="@drawable/bg_button_radius"
-            android:drawableEnd="@drawable/small_size_arrow"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="@dimen/_20sdp"
-            android:text="Submit"
-            android:textColor="@color/app_red"
-            android:textSize="@dimen/_11sdp"
-            app:layout_constraintEnd_toEndOf="@id/edtPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="@dimen/_20sdp"
-            app:layout_constraintStart_toStartOf="@id/edtPassword"
-            app:layout_constraintTop_toBottomOf="@+id/tvTermsCondition" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Confirm Password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPass" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.core.widget.NestedScrollView>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:background="@drawable/bg_edit_radius"
+                android:drawableStart="@drawable/btn_lock"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Enter Confirm Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvConfirmPassword" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheck"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/check"
+                app:layout_constraintStart_toStartOf="@+id/edtConfirmPassword"
+                app:layout_constraintTop_toBottomOf="@+id/edtConfirmPassword" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="I accept"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck"
+                app:layout_constraintStart_toEndOf="@+id/ivCheck"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTermsCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="terms conditions"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheck"
+                app:layout_constraintStart_toEndOf="@+id/tvIAccept"
+                app:layout_constraintTop_toTopOf="@+id/ivCheck" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_button_radius"
+                android:drawableEnd="@drawable/small_size_arrow"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:text="Submit"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/edtPassword"
+                app:layout_constraintStart_toStartOf="@id/edtPassword"
+                app:layout_constraintTop_toBottomOf="@+id/tvTermsCondition" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

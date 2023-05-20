@@ -1,23 +1,19 @@
-package com.live.lukastore.LogInSignUpSection.Fragment
+package com.live.lukastore.fragment
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.live.lukastore.R
+import com.live.lukastore.core.BaseFragment
 import com.live.lukastore.databinding.FragmentWalkthroughBinding
 
-class WalkthroughFragment : Fragment() {
-    lateinit var binding:FragmentWalkthroughBinding
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-      binding =  FragmentWalkthroughBinding.inflate(layoutInflater)
-        return binding.root
+class WalkthroughFragment : BaseFragment<FragmentWalkthroughBinding>() {
+    override fun inflateBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FragmentWalkthroughBinding {
+        return FragmentWalkthroughBinding.inflate(layoutInflater)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

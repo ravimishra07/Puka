@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/custom_toolbar"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="@color/blur_red"
-    app:titleTextColor="@android:color/white"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    android:layout_height="?attr/actionBarSize">
 
-    <!-- Add a back button as the navigation icon -->
-    <ImageView
-        android:id="@+id/back_button"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:padding="6dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/back_default" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/toolbar_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Default Title"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:fontFamily="@font/poppins_semibold"
-        android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:src="@drawable/back_default" />
 
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="@color/blur_red"
+            android:textSize="24sp" />
+    </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>
