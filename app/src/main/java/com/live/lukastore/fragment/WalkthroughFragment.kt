@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.live.lukastore.NavigationData
 import com.live.lukastore.R
 import com.live.lukastore.core.BaseFragment
 import com.live.lukastore.databinding.FragmentWalkthroughBinding
+import com.live.lukastore.util.FragmentType
 
 class WalkthroughFragment : BaseFragment<FragmentWalkthroughBinding>() {
     override fun inflateBinding(
@@ -22,14 +24,12 @@ class WalkthroughFragment : BaseFragment<FragmentWalkthroughBinding>() {
     }
 
     private fun initListener() {
-        with(binding){
+        binding.apply{
             btnSignIn.setOnClickListener {
-                requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.frame_login_signUp, SignInFragment()).addToBackStack(null).commit()
-            }
+                navigate?.moveToFragment(NavigationData(FragmentType.LOGIN_FRAGMENT,true,getString(R.string.sign_in),true))
+           }
             tvSignUp.setOnClickListener {
-                requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.frame_login_signUp, SignUpFragment()).addToBackStack(null).commit()
+                navigate?.moveToFragment(NavigationData(FragmentType.SIGN_UP_FRAGMENT,true,getString(R.string.sign_up),true))
             }
         }
     }

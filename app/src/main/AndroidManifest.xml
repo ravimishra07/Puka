@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,27 +13,32 @@
         android:theme="@style/Theme.Lukastore"
         tools:targetApi="31">
         <activity
-            android:name=".DashboardActivity"
+            android:name=".activity.AddProductActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".activity.DashboardActivity"
             android:exported="false"
             android:label="@string/title_activity_dashboard" />
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".activity.HomeActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".core.BaseActivity"
             android:exported="false" />
-        <activity
-            android:name=".activity.SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.ForgotActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.WalkThroughActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.LoginActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".activity.SignUpActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".activity.ForgotActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".activity.WalkThroughActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".activity.LoginActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true">
@@ -43,10 +48,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Lukastore" />
+<!--        <activity-->
+<!--            android:name=".activity.MainActivity"-->
+<!--            android:exported="false"-->
+<!--            android:theme="@style/Theme.Lukastore" />-->
 
         <meta-data
             android:name="preloaded_fonts"

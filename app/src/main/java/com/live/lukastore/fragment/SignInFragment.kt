@@ -30,10 +30,10 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>() {
     private fun initListener() {
         binding.apply {
             tvForgotPassword.setOnClickListener {
-                navigate?.moveToFragment(NavigationData(FragmentType.FORGOT_PASSWORD,true,getString(R.string.forgot_password)))
+                navigate?.moveToFragment(NavigationData(FragmentType.FORGOT_PASSWORD,true,getString(R.string.forgot_password),true))
             }
-            tvSignIn.setOnClickListener{
-                navigate?.moveToFragment(NavigationData(FragmentType.LOGIN_FRAGMENT,true,getString(R.string.forgot_password)))
+            btnLoginIn.setOnClickListener{
+                navigate?.moveToFragment(NavigationData(FragmentType.VERIFICATION,true,getString(R.string.verification),true))
             }
         }
     }

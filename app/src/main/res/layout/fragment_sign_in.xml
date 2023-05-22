@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fragment.SignInFragment">
 
     <include
@@ -110,7 +111,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/btnSignUp"
+                    android:id="@+id/btnLoginIn"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_marginHorizontal="@dimen/_30sdp"
@@ -134,9 +135,9 @@
                     android:text="Or Sign In with"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_10sdp"
-                    app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
-                    app:layout_constraintStart_toStartOf="@+id/btnSignUp"
-                    app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+                    app:layout_constraintEnd_toEndOf="@+id/btnLoginIn"
+                    app:layout_constraintStart_toStartOf="@+id/btnLoginIn"
+                    app:layout_constraintTop_toBottomOf="@+id/btnLoginIn" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivFb"
@@ -148,7 +149,7 @@
                     android:src="@drawable/iv_facebook"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/ivGoogle"
-                    app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+                    app:layout_constraintStart_toStartOf="@+id/btnLoginIn"
                     app:layout_constraintTop_toBottomOf="@+id/tvSignIn" />
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -168,7 +169,7 @@
                     android:layout_marginTop="@dimen/_15sdp"
                     android:layout_marginEnd="@dimen/_30sdp"
                     android:src="@drawable/iv_apple"
-                    app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnLoginIn"
                     app:layout_constraintStart_toEndOf="@+id/ivGoogle"
                     app:layout_constraintTop_toBottomOf="@+id/tvSignIn" />
 

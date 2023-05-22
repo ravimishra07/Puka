@@ -12,6 +12,7 @@ import com.live.lukastore.databinding.ActivityBaseBinding
 import com.live.lukastore.fragment.ForgotPasswordFragment
 import com.live.lukastore.fragment.SignInFragment
 import com.live.lukastore.fragment.SignUpFragment
+import com.live.lukastore.fragment.VerificationFragment
 import com.live.lukastore.fragment.WalkthroughFragment
 import com.live.lukastore.fragment.dashboard.home.HomeFragment
 import com.live.lukastore.util.*
@@ -34,15 +35,18 @@ open class BaseActivity : AppCompatActivity(), Navigation {
             showToolBar(it)
             loadFragment(it.fragmentType, it.replaceContainer)
         }
+        parentBinding.tb.backButton.setOnClickListener{
+            supportFragmentManager.popBackStack()
+        }
     }
 
-    fun showToolBar(
+    private fun showToolBar(
         navigationData: NavigationData
     ) {
         parentBinding.tb.apply {
             customToolbar.shouldShow(navigationData.showToolbar)
             backButton.shouldShow(navigationData.showBackButton)
-            title = navigationData.fragmentTitle
+            toolbarTitle.text = navigationData.fragmentTitle
         }
     }
 
@@ -53,6 +57,7 @@ open class BaseActivity : AppCompatActivity(), Navigation {
             FragmentType.WALK_THROUGH -> WalkthroughFragment()
             FragmentType.FORGOT_PASSWORD -> ForgotPasswordFragment()
             FragmentType.HOME -> HomeFragment()
+            FragmentType.VERIFICATION -> VerificationFragment()
             else -> {
                 // if this condition is triggered then you might have missed adding a fragment in above block
                 SignInFragment()
@@ -76,7 +81,8 @@ open class BaseActivity : AppCompatActivity(), Navigation {
         fragment.arguments = fragBundle
         supportFragmentManager.beginTransaction()
             .add(parentBinding.container.id, fragment)
-            .addToBackStack("")
+            .addToBackStack(null)
+
             .commit()
     }
 

@@ -8,5 +8,5 @@ data class NavigationData(
     val showToolbar: Boolean = true,
     val fragmentTitle: String = "",
     val showBackButton: Boolean = false,
-    val replaceContainer:Boolean = true
+    val replaceContainer:Boolean = false
 ): Serializable

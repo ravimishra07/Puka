@@ -13,4 +13,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="home">Home</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="price">Price</string>
+    <string name="upload">Upload</string>
+    <string name="product">Product</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
 </resources>

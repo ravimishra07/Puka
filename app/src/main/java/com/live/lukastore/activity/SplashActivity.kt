@@ -20,7 +20,7 @@ class SplashActivity : BaseActivity() {
     }
     private fun onClick() {
         delay(3000) {
-            val navigationData = NavigationData(FragmentType.HOME,false)
+            val navigationData = NavigationData(FragmentType.WALK_THROUGH,false)
             intent?.apply {
                 putExtra(Constants.NAVIGATION_DATA, navigationData)
             }
