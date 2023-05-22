@@ -4,14 +4,17 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.live.lukastore.OrderListeners
 import com.live.lukastore.databinding.ColorOptionRowItemBinding
 import com.live.lukastore.model.HomeItem
+import com.live.lukastore.model.OrderItem
 import com.live.lukastore.util.randomColor
 import com.live.lukastore.util.setColoredCard
 import com.live.lukastore.util.toPixel
+import javax.sql.RowSetListener
 import kotlin.random.Random
 
-class HomeItemAdapter(private val items: List<HomeItem>) :
+class HomeItemAdapter(private val items: List<HomeItem>, val listener: OrderListeners) :
     RecyclerView.Adapter<HomeItemAdapter.ItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -38,6 +41,9 @@ class HomeItemAdapter(private val items: List<HomeItem>) :
                 backgroundColor = Color.parseColor(item.backGroundColor)
             )
             binding.root.addView(cardView)
+            itemView.setOnClickListener{
+                listener.onItemClicked(layoutPosition)
+            }
         }
     }
 }

@@ -5,28 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <fragment
-        android:id="@+id/nav_host_fragment_activity_dashboard"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <FrameLayout
+        android:id="@+id/containerFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/bottomBar"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/addProductButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/app_red"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/bottomBar"
-
+android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottomBar"
         app:layout_constraintStart_toStartOf="@+id/bottomBar"
@@ -34,12 +29,15 @@
         android:layout_marginBottom="30dp"
         app:maxImageSize="32dp"
         app:rippleColor="@color/app_red"
-        app:tint="@android:color/white" />
+        app:tint="@android:color/white"
+        android:contentDescription="cc" />
     <RelativeLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/nav_host_fragment_activity_dashboard"
+        android:elevation="4dp"
+        android:background="@color/thin_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -53,12 +51,14 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_home_black_24dp"
+                android:id="@+id/ivMenuHome"
+                android:layout_width="@dimen/bottom_icon_size"
+                android:layout_height="@dimen/bottom_icon_size"
+                android:src="@drawable/home"
                 android:tint="@color/app_red" />
 
             <TextView
+                android:id="@+id/tvMenuHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -77,12 +77,14 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_home_black_24dp"
+                android:id="@+id/ivMenuProduct"
+                android:layout_width="@dimen/bottom_icon_size"
+                android:layout_height="@dimen/bottom_icon_size"
+                android:src="@drawable/products"
                 android:tint="@color/text_grey" />
 
             <TextView
+                android:id="@+id/tvMenuProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -98,16 +100,17 @@
             android:layout_marginHorizontal="@dimen/horizontal_menu_margin"
             android:layout_toStartOf="@+id/menuSettings"
             android:gravity="center"
-
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_home_black_24dp"
+                android:id="@+id/ivMenuProfile"
+                android:layout_width="@dimen/bottom_icon_size"
+                android:layout_height="@dimen/bottom_icon_size"
+                android:src="@drawable/ic_user"
                 android:tint="@color/text_grey" />
 
             <TextView
+                android:id="@+id/tvMenuProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -126,12 +129,14 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_home_black_24dp"
+                android:id="@+id/ivMenuSettings"
+                android:layout_width="@dimen/bottom_icon_size"
+                android:layout_height="@dimen/bottom_icon_size"
+                android:src="@drawable/settings"
                 android:tint="@color/text_grey" />
 
             <TextView
+                android:id="@+id/tvMenuSettings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
@@ -139,8 +144,5 @@
                 android:text="Settings"
                 android:textColor="@color/text_grey" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-
     </RelativeLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

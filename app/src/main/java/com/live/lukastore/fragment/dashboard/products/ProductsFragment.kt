@@ -1,42 +1,16 @@
 package com.live.lukastore.fragment.dashboard.products
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.live.lukastore.databinding.FragmentDashboardBinding
+import com.live.lukastore.core.BaseFragment
+import com.live.lukastore.databinding.FragmentProductBinding
 
-class ProductsFragment : Fragment() {
+class ProductsFragment : BaseFragment<FragmentProductBinding>() {
 
-    private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
+    override fun inflateBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val productsViewModel =
-            ViewModelProvider(this).get(ProductsViewModel::class.java)
-
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        productsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        container: ViewGroup?
+    ): FragmentProductBinding {
+        return FragmentProductBinding.inflate(layoutInflater)
     }
 }

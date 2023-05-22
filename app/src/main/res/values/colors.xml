@@ -4,9 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_white">#FFFFFF</color>
     <color name="app_red">#FF553E</color>
+    <color name="app_green">#40C4B7</color>
     <color name="blur_red">#FF7765</color>
     <color name="off_white">#C8C3C3</color>
     <color name="text_grey">#9A9393</color>
     <color name="text_white">#F4EBEB</color>
+    <color name="thin_grey">#F7F7F7</color>
 
 </resources>

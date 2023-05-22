@@ -13,11 +13,20 @@ abstract class BaseFragment<Binding : ViewBinding> : Fragment() {
     private var _binding: Binding? = null
     protected val binding: Binding
         get() = _binding!!
-     var navigate: Navigation? = null
+    var navigate: Navigation? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = inflateBinding(inflater, container)
         return binding.root
+    }
+
+
+    fun popCurrentFragment() {
+        requireActivity().supportFragmentManager.popBackStack()
     }
 
     override fun onDestroyView() {

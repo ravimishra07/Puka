@@ -30,6 +30,6 @@
             android:gravity="center"
             android:text="Home"
             android:textColor="@color/blur_red"
-            android:textSize="24sp" />
+            android:textSize="22sp" />
     </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>

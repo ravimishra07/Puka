@@ -11,6 +11,7 @@ import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
 import java.io.Serializable
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.random.Random
 
@@ -38,7 +39,7 @@ inline fun <reified T : Serializable> Intent.serializable(key: String): T? = whe
     else -> @Suppress("DEPRECATION") getSerializableExtra(key) as? T
 }
 
-fun ViewGroup.setColoredCard(
+fun View.setColoredCard(
     width:Int = ViewGroup.LayoutParams.MATCH_PARENT,
     height: Int=50.toPixel(),
     cornerRadius: Float ,
@@ -88,4 +89,8 @@ fun Random.randomColor(): Int {
 }
 
 
-
+fun formatTimestampToDate(timestamp: Long): String {
+    val date = Date(timestamp)
+    val dateFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+    return dateFormat.format(date)
+}

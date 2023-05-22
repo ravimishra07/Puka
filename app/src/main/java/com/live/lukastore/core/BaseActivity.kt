@@ -85,6 +85,10 @@ open class BaseActivity : AppCompatActivity(), Navigation {
 
             .commit()
     }
+    override fun moveToFragment(navigationData: NavigationData) {
+        showToolBar(navigationData)
+        loadFragment(navigationData.fragmentType,navigationData.replaceContainer)
+    }
 
     companion object {
         fun launch(activity: Activity) =
@@ -94,10 +98,5 @@ open class BaseActivity : AppCompatActivity(), Navigation {
                     putExtras(it)
                 }
             })
-    }
-
-    override fun moveToFragment(navigationData: NavigationData) {
-        showToolBar(navigationData)
-        loadFragment(navigationData.fragmentType,navigationData.replaceContainer)
     }
 }

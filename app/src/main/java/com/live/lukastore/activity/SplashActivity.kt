@@ -20,11 +20,11 @@ class SplashActivity : BaseActivity() {
     }
     private fun onClick() {
         delay(3000) {
-            val navigationData = NavigationData(FragmentType.WALK_THROUGH,false)
-            intent?.apply {
-                putExtra(Constants.NAVIGATION_DATA, navigationData)
-            }
-            launch(this)
+//            val navigationData = NavigationData(FragmentType.WALK_THROUGH,false)
+//            intent?.apply {
+//                putExtra(Constants.NAVIGATION_DATA, navigationData)
+//            }
+            LoginActivity.launch(this)
         }
     }
 }
